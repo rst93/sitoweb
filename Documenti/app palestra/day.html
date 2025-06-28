@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day - Gym App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="day-title">Day 1</h1>
+        <div id="exercise-list">
+            <!-- Exercises will be listed here -->
+        </div>
+        <div class="exercise-form">
+            <h2>Add Exercise</h2>
+            <input type="text" id="exercise-name" placeholder="Exercise Name">
+            <input type="number" id="sets" placeholder="Sets">
+            <input type="number" id="reps" placeholder="Reps">
+            <input type="number" id="weight" placeholder="Weight (optional)">
+            <button id="add-exercise-btn">Add Exercise</button>
+        </div>
+        <div class="day-actions">
+            <button id="save-day-btn">Save Day</button>
+            <a href="new-plan.html">Back to New Plan</a>
+        </div>
+    </div>
+    <script src="day.js"></script>
+</body>
+</html>
