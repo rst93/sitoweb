@@ -51,9 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             body: JSON.stringify(plan)
         })
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                return response.text().then(text => { throw new Error(text) });
+            }
+            return response.json();
+        })
         .then(data => {
-            alert(data);
+            alert(data.message);
             for (let i = 1; i < dayCounter; i++) {
                 localStorage.removeItem(`day-${i}`);
             }
